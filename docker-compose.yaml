@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  freetest2:
+    image: ravooo/freeswitch:1.10.12
+    container_name: freetest2
+    network_mode: "host"
+    volumes:
+      - ./conf:/usr/local/freeswitch/conf
+      - ./db:/usr/local/freeswitch/db
+      - ./log:/usr/local/freeswitch/log
+      - ./recordings:/usr/local/freeswitch/recordings
+      - ./scripts:/usr/local/freeswitch/scripts
+      - ./sounds:/usr/local/freeswitch/sounds
+    environment:
+      - PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/freeswitch/bin
+    restart: unless-stopped
+ 
