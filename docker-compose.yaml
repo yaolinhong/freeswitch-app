@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   freetest2:
-    image: ravooo/freeswitch:1.10.12
+    image: deker1176/freeswitch:latest
     container_name: freetest2
     network_mode: "host"
     volumes:
