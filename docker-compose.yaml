@@ -1,9 +1,9 @@
 version: '3.8'
 
 services:
-  freetest2:
+  freeswitch:
     image: deker1176/freeswitch:latest
-    container_name: freetest2
+    container_name: freeswitch
     network_mode: "host"
     volumes:
       - ./conf:/usr/local/freeswitch/conf
@@ -12,7 +12,5 @@ services:
       - ./recordings:/usr/local/freeswitch/recordings
       - ./scripts:/usr/local/freeswitch/scripts
       - ./sounds:/usr/local/freeswitch/sounds
-    environment:
-      - PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/freeswitch/bin
     restart: unless-stopped
  
